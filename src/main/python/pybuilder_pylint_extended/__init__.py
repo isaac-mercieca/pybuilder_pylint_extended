@@ -53,7 +53,7 @@ def initialize_pylint_plugin(project):
 
 
 def _run_pylint(args):
-    execution_result = lint.Run(args, exit=False)
+    execution_result = lint.Run(args, do_exit=False)
     pylint_stats = execution_result.linter.stats
     return (pylint_stats['global_note'], pylint_stats['fatal'],
             pylint_stats['error'], pylint_stats['warning'],
